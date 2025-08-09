@@ -1,0 +1,5 @@
+<app-card></app-card>
+
+@for (item of productList; track item.title){
+  <app-card [itemInCard] ="item"></app-card>
+}
