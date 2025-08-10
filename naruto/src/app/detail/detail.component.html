@@ -1,0 +1,276 @@
+<body>
+<div class="container">
+  <div class="header">
+    <h1>{{this.characterDetail?.name}}</h1>
+    @for (item of this.characterDetail?.images ; track $index) {
+      <img src="{{item}}" alt="">
+    }
+
+  </div>
+
+  <div class="section">
+    <h2>Debut</h2>
+
+    <ul>
+      <li><strong>Manga:</strong> {{this.characterDetail?.debut?.manga}}</li>
+      <li><strong>Anime:</strong> {{this.characterDetail?.debut?.anime}}</li>
+      <li><strong>Novel:</strong> {{this.characterDetail?.debut?.novel}}</li>
+      <li><strong>Movie:</strong> {{this.characterDetail?.debut?.movie}}</li>
+      <li><strong>Game:</strong> {{this.characterDetail?.debut?.game}}</li>
+      <li><strong>OVA:</strong> {{this.characterDetail?.debut?.ova}}</li>
+      <li><strong>Appears In:</strong> {{this.characterDetail?.debut?.appearsIn}}</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Family</h2>
+    <ul>
+      <li><strong>Father:</strong> {{this.characterDetail?.family?.father}}</li>
+      <li><strong>Mother:</strong> {{this.characterDetail?.family?.mother}}</li>
+      <li><strong>Son:</strong> {{this.characterDetail?.family?.son}}</li>
+      <li><strong>Daughter:</strong> {{this.characterDetail?.family?.daughter}}</li>
+      <li><strong>Wife:</strong> {{this.characterDetail?.family?.wife}}</li>
+      <li><strong>Adoptive Son:</strong> {{this.characterDetail?.family?.adoptiveSon}}</li>
+      <li><strong>Godfather:</strong> {{this.characterDetail?.family?.godfather}}</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Jutsu</h2>
+    @for (item of this.characterDetail?.jutsu; track $index) {
+      <ul>
+        <li>
+          {{item}}
+        </li>
+      </ul>
+    }
+<!--    <button class="collapsible">Jutsu List (93)</button>-->
+<!--    <div class="content">-->
+<!--      <ul class="sub-list">-->
+<!--        <li>All Directions Shuriken</li>-->
+<!--        <li>Baryon Mode</li>-->
+<!--        <li>Big Ball Rasengan</li>-->
+<!--        <li>Big Ball Rasenshuriken</li>-->
+<!--        <li>Big Ball Spiralling Serial Zone Spheres</li>-->
+<!--        <li>Boil Release: Unrivalled Strength</li>-->
+<!--        <li>Chakra Transfer Technique</li>-->
+<!--        <li>Clone Body Blow</li>-->
+<!--        <li>Clone Flying Arrow</li>-->
+<!--        <li>Clone Spinning Heel Drop (Anime only)</li>-->
+<!--        <li>Combination Transformation</li>-->
+<!--        <li>Continuous Tailed Beast Balls</li>-->
+<!--        <li>Crescent Moon Rasengan</li>-->
+<!--        <li>Earth Release: Earth-Style Wall</li>-->
+<!--        <li>Erupting Propulsion Fist</li>-->
+<!--        <li>Fire Release: Toad Oil Flame Bullet (Anime only)</li>-->
+<!--        <li>Frog Kata</li>-->
+<!--        <li>Frog Strike</li>-->
+<!--        <li>Gelel Rasengan</li>-->
+<!--        <li>Gentle Step Spiralling Twin Lion Fists</li>-->
+<!--        <li>Guts Rasengan</li>-->
+<!--        <li>Harem Technique</li>-->
+<!--        <li>Hurricane Thunderclap — Majestic Attire Sword Stroke</li>-->
+<!--        <li>Ink Creation</li>-->
+<!--        <li>Kurama Arm Attack</li>-->
+<!--        <li>Mini-Rasenshuriken</li>-->
+<!--        <li>Multiple Shadow Clone Technique</li>-->
+<!--        <li>Naruto Region Combo</li>-->
+<!--        <li>Naruto Uzumaki Combo</li>-->
+<!--        <li>Naruto Uzumaki Two Thousand Combo</li>-->
+<!--        <li>Naruto and Shion's Super Chakra Rasengan</li>-->
+<!--        <li>Negative Emotions Sensing</li>-->
+<!--        <li>New Sexy Technique</li>-->
+<!--        <li>Nine-Tails Chakra Mode</li>-->
+<!--        <li>Ninja Art: Bare-Handed Blade Block</li>-->
+<!--        <li>One Thousand Years of Death</li>-->
+<!--        <li>Pachinko Technique (Anime only)</li>-->
+<!--        <li>Parachute</li>-->
+<!--        <li>Parent and Child Rasengan</li>-->
+<!--        <li>Planetary Rasengan</li>-->
+<!--        <li>Rasengan</li>-->
+<!--        <li>Rasengan: Flash</li>-->
+<!--        <li>Regeneration Ability</li>-->
+<!--        <li>Runt Ball Rasengan (Anime only)</li>-->
+<!--        <li>Sage Art: Lava Release Rasenshuriken</li>-->
+<!--        <li>Sage Art: Magnet Release Rasengan</li>-->
+<!--        <li>Sage Art: Many Ultra-Big Ball Spiralling Serial Spheres</li>-->
+<!--        <li>Sage Art: Super Tailed Beast Rasenshuriken</li>-->
+<!--        <li>Sage Mode</li>-->
+<!--        <li>Scorch Release: Halo Hurricane Jet Black Arrow Style Zero</li>-->
+<!--        <li>Seven-Coloured Rasengan</li>-->
+<!--        <li>Sexy Reverse Harem Technique</li>-->
+<!--        <li>Sexy Technique</li>-->
+<!--        <li>Sexy Technique: Pole Dance and Nice Body (Anime only)</li>-->
+<!--        <li>Shadow Clone Technique</li>-->
+<!--        <li>Shadow Shuriken Technique</li>-->
+<!--        <li>Shuriken Shadow Clone Technique (Anime only)</li>-->
+<!--        <li>Six Paths Sage Mode</li>-->
+<!--        <li>Six Paths Senjutsu</li>-->
+<!--        <li>Six Paths Yang Power</li>-->
+<!--        <li>Six Paths — Chibaku Tensei</li>-->
+<!--        <li>Six Paths: Ultra-Big Ball Rasenshuriken</li>-->
+<!--        <li>Soap Bubble Ninjutsu (Anime only)</li>-->
+<!--        <li>Spiralling Absorption Sphere</li>-->
+<!--        <li>Spiralling Serial Spheres</li>-->
+<!--        <li>Spiralling Strife Spheres</li>-->
+<!--        <li>Strong Fist (Anime only)</li>-->
+<!--        <li>Summoning Technique (Toad)</li>-->
+<!--        <li>Summoning: Food Cart Destroyer Technique</li>-->
+<!--        <li>Super Mini-Tailed Beast Ball</li>-->
+<!--        <li>Super-Ultra-Big Ball Rasengan</li>-->
+<!--        <li>Supreme Ultimate Rasengan</li>-->
+<!--        <li>Tailed Beast Ball</li>-->
+<!--        <li>Tailed Beast Ball Rasenshuriken</li>-->
+<!--        <li>Tailed Beast Chakra Arms</li>-->
+<!--        <li>Tailed Beast Full Charge</li>-->
+<!--        <li>Tailed Beast Rasengan</li>-->
+<!--        <li>Tailed Beast Shockwave</li>-->
+<!--        <li>Torii Seal</li>-->
+<!--        <li>Tornado Rasengan</li>-->
+<!--        <li>Truth-Seeking Ball</li>-->
+<!--        <li>Turning into a Frog Technique (Anime only)</li>-->
+<!--        <li>Typhoon Water Vortex Technique</li>-->
+<!--        <li>Ultra-Big Ball Rasengan</li>-->
+<!--        <li>Ultra-Many Spiralling Serial Spheres</li>-->
+<!--        <li>Uzumaki Formation (Anime only)</li>-->
+<!--        <li>Wind Release: Rasengan</li>-->
+<!--        <li>Wind Release: Rasenshuriken</li>-->
+<!--        <li>Wind Release: Repeated Rasenshuriken</li>-->
+<!--        <li>Wind Release: Toad Gun (Anime only)</li>-->
+<!--        <li>Wind Release: Toad Oil Bullet (Anime only)</li>-->
+<!--        <li>Wind Release: Toad Oil Flame Bullet (Anime only)</li>-->
+<!--        <li>Wind Release: Ultra-Big Ball Rasenshuriken</li>-->
+<!--        <li>Wisdom Wolf Decay</li>-->
+<!--      </ul>-->
+<!--    </div>-->
+  </div>
+
+  <div class="section">
+    <h2>Nature Type</h2>
+    @for (item of this.characterDetail?.natureType ; track $index) {
+      <ul>
+        <li>{{item}}</li>
+      </ul>
+    }
+    <ul>
+      <li>Wind Release (Affinity)</li>
+      <li>Lightning Release</li>
+      <li>Earth Release</li>
+      <li>Water Release</li>
+      <li>Fire Release</li>
+      <li>Lava Release</li>
+      <li>Magnet Release</li>
+      <li>Boil Release</li>
+      <li>Yin Release</li>
+      <li>Yang Release</li>
+      <li>Yin–Yang Release</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Personal</h2>
+    <ul>
+      <li><strong>Birthdate:</strong> {{this.characterDetail?.personal?.birthdate}}</li>
+      <li><strong>Sex:</strong> Male</li>
+      <li><strong>Age:</strong>
+        <ul class="sub-list">
+          <li>Part I: 12–13</li>
+          <li>Part II: 15–17</li>
+          <li>Academy Graduate: 12</li>
+        </ul>
+      </li>
+      <li><strong>Height:</strong>
+        <ul class="sub-list">
+          <li>Part I: 145.3cm - 147.5cm</li>
+          <li>Part II: 166cm</li>
+          <li>Blank Period: 180cm</li>
+        </ul>
+      </li>
+      <li><strong>Weight:</strong>
+        <ul class="sub-list">
+          <li>Part I: 40.1kg - 40.6kg</li>
+          <li>Part II: 50.9kg</li>
+        </ul>
+      </li>
+      <li><strong>Blood Type:</strong> B</li>
+      <li><strong>Kekkei Genkai:</strong> Lava Release, Magnet Release, Boil Release</li>
+      <li><strong>Classification:</strong> Jinchūriki, Sage, Sensor Type</li>
+      <li><strong>Tailed Beast:</strong> Shukaku, Matatabi, Isobu, Son Gokū, Kokuō, Saiken, Chōmei, Gyūki, Kurama (Forms)</li>
+      <li><strong>Occupation:</strong> Hokage, Chūnin Exams Proctor (Anime only)</li>
+      <li><strong>Affiliation:</strong> Konohagakure, Mount Myōboku, Allied Shinobi Forces</li>
+      <li><strong>Team:</strong>
+        @for (item of this.characterDetail?.personal?.team ; track $index) {
+          <p>{{item}}</p>
+        }
+      </li>
+      <li><strong>Clan:</strong> {{this.characterDetail?.personal?.clan}}</li>
+      <li><strong>Titles:</strong>
+        @for (item of this.characterDetail?.personal?.titles ; track $index) {
+          <p>{{item}}</p>
+        }
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Rank</h2>
+    <ul>
+      <li><strong>Ninja Rank:</strong>
+        <ul class="sub-list">
+          <li>Part I: {{this.characterDetail?.rank?.ninjaRank?.partI}}</li>
+          <li>Gaiden: {{this.characterDetail?.rank?.ninjaRank?.gaiden}}</li>
+        </ul>
+      </li>
+      <li><strong>Ninja Registration:</strong> {{this.characterDetail?.rank?.ninjaRegistration}}</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Tools</h2>
+    @for (item of this.characterDetail?.tools; track $index) {
+      <ul>
+        <li>
+          {{item}}
+        </li>
+      </ul>
+    }
+<!--    <ul>-->
+<!--      <li>Absorbing Hand</li>-->
+<!--      <li>Bō (Anime only)</li>-->
+<!--      <li>Chakra Blade (Anime only)</li>-->
+<!--      <li>Flying Thunder God Kunai</li>-->
+<!--      <li>Fūma Shuriken</li>-->
+<!--      <li>Hidden Kunai Mechanism</li>-->
+<!--      <li>Konoha Chakra Blade</li>-->
+<!--      <li>Sand</li>-->
+<!--      <li>Stone of Gelel</li>-->
+<!--    </ul>-->
+  </div>
+
+  <div class="section">
+    <h2>Voice Actors</h2>
+    <ul>
+      <li><strong>Japanese:</strong>
+        @for (item of this.characterDetail?.voiceActors?.japanese ; track $index) {
+          <p>{{item}}</p>
+        }
+<!--        <ul class="sub-list">-->
+<!--          <li>Junko Takeuchi</li>-->
+<!--          <li>Ema Kogure (Sexy Technique)</li>-->
+<!--        </ul>-->
+      </li>
+      <li><strong>English:</strong>
+        @for (item of this.characterDetail?.voiceActors?.english ; track $index) {
+          <p>{{item}}</p>
+        }
+<!--        <ul class="sub-list">-->
+<!--          <li>Maile Flanagan</li>-->
+<!--          <li>Stephanie Sheh (Sexy Technique)</li>-->
+<!--          <li>Jeannie Elias (Sexy Technique) (episode 53-55)</li>-->
+<!--          <li>Mary Elizabeth McGlynn (Sexy Technique) (episode 177)</li>-->
+<!--          <li>Kate Higgins (Sexy Technique) (episode 229)</li>-->
+<!--        </ul>-->
+      </li>
+    </ul>
+  </div>
+</div>
