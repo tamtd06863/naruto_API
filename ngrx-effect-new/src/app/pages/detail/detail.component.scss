@@ -1,0 +1,145 @@
+.detail-container {
+  background: #111;
+  min-height: 100vh;
+  padding: 32px 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-top {
+  border: 2px solid #ff9800;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 32px;
+  text-align: center;
+  background: #181818;
+}
+
+.character-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff9800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.images-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+}
+
+.character-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border: 2px solid #ff9800;
+  border-radius: 12px;
+  background: #222;
+}
+
+.planet-image{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 2px solid #ff9800;
+  border-radius: 12px;
+  background: #222;
+}
+
+.detail-attributes {
+  border: 2px solid #ff9800;
+  border-radius: 14px;
+  background: #181818;
+  padding: 24px;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  justify-items: center;
+}
+
+.attribute {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.attr-label {
+  color: #ff9800;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.attr-value {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.detail-transformations {
+  border: 2px solid #ff9800;
+  border-radius: 14px;
+  background: #181818;
+  padding: 24px;
+}
+
+.detail-transformations h2 {
+  color: #ff9800;
+  margin-bottom: 18px;
+}
+
+.transformations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.transformation-card {
+  background: #222;
+  border: 1.5px solid #ff9800;
+  border-radius: 10px;
+  width: 220px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transformation-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.transformation-name {
+  color: #ff9800;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.transformation-ki{
+  color: #ff9800;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.transformation-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .images-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .transformations-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

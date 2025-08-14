@@ -1,0 +1,47 @@
+<div class="detail-container">
+  @if (isLoadingCharacterDetail$ | async) {
+    <mat-spinner></mat-spinner>
+  } @else {
+    @if (characterDetail$ | async; as item) {
+      <!-- Top Section -->
+      <section class="detail-top">
+        <h1 class="character-name">{{ item.name }}</h1>
+        <div class="images-row">
+          <img class="character-image" [src]="item.image" alt="{{ item.name }}">
+          <img class="planet-image" [src]="item.originPlanet?.image" alt="{{ item.originPlanet?.name }}">
+        </div>
+      </section>
+
+      <!-- Middle Section: Attributes -->
+      <section class="detail-attributes">
+        @for (attr of [
+          {label: 'Gender', value: item.gender},
+          {label: 'Race', value: item.race},
+          {label: 'Ki', value: item.ki},
+          {label: 'Affiliation', value: item.affiliation}
+        ]; track $index) {
+          <div class="attribute">
+            <span class="attr-label">{{ attr.label }}:</span>
+            <span class="attr-value">{{ attr.value }}</span>
+          </div>
+        }
+      </section>
+
+      <!-- Bottom Section: Transformations -->
+      <section class="detail-transformations">
+        <h2>Transformations</h2>
+        <div class="transformations-list">
+          @for (t of item.transformations; track $index) {
+            <div class="transformation-card">
+              <img [src]="t.image" alt="{{ t.name }}">
+              <div class="transformation-info">
+                <div class="transformation-name">{{ t.name }}</div>
+                <div class="transformation-ki">Ki: {{ t.ki }}</div>
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+    }
+  }
+</div>
